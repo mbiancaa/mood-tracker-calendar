@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+.MoodMeter {
+  display: flex;
+  flex-wrap: wrap;
+  /*to be deleted*/
+  max-width: 600px;
+  margin: auto;
+}
+
+.MoodQuadrant {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Mood {
+  cursor: pointer;
+  height: 0;
+  padding-top: calc(100% / 5);
+  width: calc(100% / 5);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.Mood.Selected {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.MoodText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8px;
+}
