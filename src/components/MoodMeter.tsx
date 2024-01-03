@@ -1,7 +1,8 @@
 import MoodQuadrant from "./MoodQuadrant";
 import { Moods } from "../constants/moods";
+import React from "react";
 
-export default function MoodMeter() {
+const MoodMeter: React.FC = () => {
 
     return (
         <div className="MoodMeter">
@@ -12,3 +13,5 @@ export default function MoodMeter() {
     );
 
 }
+
+export default MoodMeter;

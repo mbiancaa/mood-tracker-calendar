@@ -1,28 +1,65 @@
 .App {
   text-align: center;
+  min-height: 100dvh;
+  max-height: 100dvh;
+  box-sizing: border-box;
+  background-image: url("/src/assets/images/background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.App:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+.Container {
+  padding: 20px 10px;
+  height: 100%;
+  width: 100%;
+  min-height: 100dvh;
+  max-height: 100dvh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .MoodMeter {
   display: flex;
   flex-wrap: wrap;
-  /*to be deleted*/
-  max-width: 600px;
+  /*max-width: 600px;*/
+  width: 100%;
   margin: auto;
+  height: calc(100dvh - 60px);
+  position: absolute;
+  top: 0;
 }
 
 .MoodQuadrant {
   width: 50%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .Mood {
   cursor: pointer;
-  height: 0;
-  padding-top: calc(100% / 5);
-  width: calc(100% / 5);
+  height: 100%;
+  width: 100%;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 }
 
 .Mood.Selected {
@@ -41,4 +78,61 @@
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 8px;
+}
+
+.MoodOverviewContainer {
+  padding: 20px;
+}
+
+.MoodOverviewContainer h2 {
+  line-height: 20px;
+  font-size: 20px;
+}
+
+p {
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.ColorsList {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.ColorsList li {
+  padding: 10px 0;
+}
+
+.TrackMoodButton {
+  background: #e4caca;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 30px auto;
+  color: #fff;
+  font-weight: 600;
+}
+
+.MenuBar {
+  position: absolute;
+  bottom: 0dvh;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  z-index: 99;
+}
+
+.MenuButton {
+  cursor: pointer;
+}
+
+.TodayMood {
+  font-size: 45px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 15px 0;
 }

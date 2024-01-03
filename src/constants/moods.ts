@@ -1,4 +1,16 @@
-export const Moods = {
+export interface MoodItem {
+    points: number;
+}
+
+export interface MoodCategory {
+    [mood: string]: MoodItem;
+}
+
+export interface MoodsObject {
+    [color: string]: MoodCategory;
+}
+
+export const Moods: MoodsObject = {
     Red: {
         'Enraged': {
             points: 5

@@ -1,4 +1,8 @@
-export const MoodsBaseColors = {
+export interface MoodsBaseColorsObject {
+    [color: string]: string[];
+}
+
+export const MoodsBaseColors: MoodsBaseColorsObject = {
     Red: [
         '#ff2100', '#ff2e00', '#ff4214', '#ff5628', '#ff6a3c'
     ],
@@ -11,6 +15,6 @@ export const MoodsBaseColors = {
     Green: [
         '#2df042', '#41f255', '#55f468', '#69f67b', '#7df88e'
     ]
-}
+};
 
-export const DARKEN_COLOR_FACTOR = 0.009;
+export const DARKEN_COLOR_FACTOR: number = 0.009;

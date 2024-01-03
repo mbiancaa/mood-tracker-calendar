@@ -1,4 +1,6 @@
-export default function MoodOverview() {
+import React from "react";
+
+const MoodOverview: React.FC = () => {
 
     return (
         <div className="MoodOverviewContainer">
@@ -7,3 +9,5 @@ export default function MoodOverview() {
     );
 
 }
+
+export default MoodOverview;
